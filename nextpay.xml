@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.x" type="plugin" group="vmpayment" method="upgrade">
+    <name>پلاگین درگاه پرداخت نکست پی برای ویرچومارت ۳ </name>
+    <creationDate>95/3/3</creationDate>
+    <author>Nextpay</author>
+    <authorUrl>https://nextpay.org</authorUrl>
+    <copyright>https://nextpay.org</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>3.0.2</version>
+    <description>
+	<![CDATA[
+		<body>
+		    <h4 style="text-align:center" align="center" dir="rtl">
+		    پلاگین پرداخت نکست پی برای کامپوننت ویرچومارت ۳
+		    </h4>
+		    <table align="center">
+		        <tbody>
+		            <tr>
+		                <td>
+		                پشتیبانی قوی توسط
+		                </td>
+		                <td>
+		                تیم نکست پی - <a href="https://nextpay.org">Nextpay.org</a>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</body>
+	]]>
+	</description>
+    <files>
+        <filename plugin="nextpay">nextpay.php</filename>
+        <filename>nextpay.xml</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>nextpay</folder>
+    </files>
+    <languages folder="language">
+        <language tag="fa-IR">fa-IR/fa-IR.plg_vmpayment_nextpay.ini</language>
+    </languages>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/elements">
+                <field type="spacer" name="spacer" label="NEXTPAY_DESCRIPTION"/>
+                <field type="text" name="api" label="API" description="API_DESC" />
+				<field name="currency" type="list" default="Rial" label="CURRENCY" description="CURRENCY_DESC">
+					<option value="Rial">RIAL</option>
+					<option value="Toman">TOMAN</option>
+				</field>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
