@@ -208,8 +208,8 @@ class plgVmPaymentnextpay extends vmPSPlugin
             } else {
                 $Amount = $amount / 10;
             }
-            $Trans_ID = $_POST['trans_id'];
-            $Order_ID = $_POST['order_id'];
+            $Trans_ID = isset($_POST['trans_id'])    ? $_POST['trans_id']    : false ;
+            $Order_ID = isset($_POST['order_id'])    ? $_POST['order_id']    : false ;
 
             if ($Trans_ID && $Order_ID) {
                 try {
